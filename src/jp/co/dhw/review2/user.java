@@ -1,4 +1,6 @@
-package jp.co.dhw.review2
+package jp.co.dhw.review2;
+import jp.co.dhw.review2.Teacher;
+import jp.co.dhw.review2.Student;
 
 public class User{
 	public Integer id;
@@ -10,7 +12,7 @@ public class User{
 	}
 
 //引数によって初期化？
-	public user(String f_name,String l_name,Integer i){
+	public User(String f_name,String l_name,Integer i){
 		id = i;
 		this.firstName=f_name;
 		this.lastName=l_name;
@@ -33,39 +35,41 @@ public class User{
 		User sake = new User("酒見","慎悟",9);
 		User naito = new User("内藤","初美",10);
 
-		kuni.showId;
-		kuni.showName;
+		kuni.showId();
+		kuni.showName();
 
-		wari.showId;
-		wari.showName;
+		wari.showId();
+		wari.showName();
 
-		nagi.showId;
-		nagi.showName;
+		nagi.showId();
+		nagi.showName();
 
-		kane.showId;
-		kane.showName;
+		kane.showId();
+		kane.showName();
 
-		hana.showId;
-		hana.showName;
+		hana.showId();
+		hana.showName();
 
-		nogu.showId;;
-		nogu.showName;
+		nogu.showId();
+		nogu.showName();
 
-		take.showId;
-		take.showName;
+		take.showId();
+		take.showName();
 
-		ima.showId;
-		ima.showName;
+		ima.showId();
+		ima.showName();
 
-		sake.showId;
-		sake.showName;
+		sake.showId();
+		sake.showName();
 
-		natio.showId;
-		naito.showName;
+		naito.showId();
+		naito.showName();
 
+		
+		//7をコメントアウトして4の作動確認
 //7のプログラム
 
-		Student[22] student;
+		Student[] student = new Student[22];
 		student[0] = new Student("武田","憲隆",1);
 		student[1] = new Student("高木","香",2);
 		student[2] = new Student("徳永","裕介",3);
@@ -89,12 +93,12 @@ public class User{
 		student[20] = new Student("山野","兼治",21);
 		student[21] = new Student("皆川","洋介",22);
 
-		for(int i;i<student.length;i++){
-			student[i].showId;
-			student[i].showName;
+		for(int i=0;i<student.length;i++){
+			student[i].showId();
+			student[i].showName();
 		}
 
-		Teacher[7] teacher;
+		Teacher[] teacher= new Teacher[7];
 		teacher[0] = new Teacher("長澤","大輔",1,"デザイン");
 		teacher[1] = new Teacher("ラディ","ジェイソン",2,"デザイン");
 		teacher[2] = new Teacher("薄井","隆",3,"Webアプリ");
@@ -103,12 +107,11 @@ public class User{
 		teacher[5] = new Teacher("コヌマ","ヨシツグ",6,"Webアプリ");
 		teacher[6] = new Teacher("渡部","昇治",7,"Webアプリ");
 
-		for(int i;i<teacher.length;i++){
-			teacher[i].showId;
-			teacher[i].showName;
+		for(int i=0;i<teacher.length;i++){
+			teacher[i].showId();
+			teacher[i].showName();
 			System.out.println("教科"+teacher[i].subject);
 		}
-
 
 	}
 }

@@ -1,11 +1,14 @@
-package jp.co.dhw.review2
+package jp.co.dhw.review2;
 
-calss Teacher exstends User{
+class Teacher extends User{
 
 	public String subject;
 
 
-	public teacher(String f_name,String l_name,Integer i,String _subject){
+	public Teacher(String f_name,String l_name,Integer i,String _subject){
+		
+		super(f_name, l_name, i);
+		
 		super.id = i;
 		super.firstName=f_name;
 		super.lastName=l_name;
