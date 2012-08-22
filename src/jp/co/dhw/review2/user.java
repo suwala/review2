@@ -1,6 +1,4 @@
 package jp.co.dhw.review2;
-import jp.co.dhw.review2.Teacher;
-import jp.co.dhw.review2.Student;
 
 public class User{
 	public Integer id;
@@ -23,7 +21,7 @@ public class User{
 	}
 
 //4のプログラム
-	public static void main(String args[]){
+	public static void main(String[] args) {
 		User kuni = new User("国崎","宏治",1);
 		User wari = new User("割鞘","洋介",2);
 		User nagi = new User("奈木野","純一",3);
@@ -110,8 +108,48 @@ public class User{
 		for(int i=0;i<teacher.length;i++){
 			teacher[i].showId();
 			teacher[i].showName();
-			System.out.println("教科"+teacher[i].subject);
+			System.out.println("教科"+teacher[i].getSubject());
 		}
 
+		//型を統一した場合
+		User[] user = new User[29];
+		user[0] = new Student("武田","憲隆",1);
+		user[1] = new Student("高木","香",2);
+		user[2] = new Student("徳永","裕介",3);
+		user[3] = new Student("柴田","伊織",4);
+		user[4] = new Student("長尾","有希子",5);
+		user[5] = new Student("酒見","真悟",6);
+		user[6] = new Student("竹末","憲和",7);
+		user[7] = new Student("國崎","宏治",8);
+		user[8] = new Student("割鞘","洋介",9);
+		user[9] = new Student("榎枝","大悟",10);
+		user[10] = new Student("今田","尭",11);
+		user[11] = new Student("松隈","恭子",12);
+		user[12] = new Student("花田","恒一",13);
+		user[13] = new Student("内藤","初美",14);
+		user[14] = new Student("原田","清司",15);
+		user[15] = new Student("永野","修平",16);
+		user[16] = new Student("奈木野","純一",17);
+		user[17] = new Student("山之内","洋平",18);
+		user[18] = new Student("鐘ヶ江","耕治",19);
+		user[19] = new Student("野口","龍真",20);
+		user[20] = new Student("山野","兼治",21);
+		user[21] = new Student("皆川","洋介",22);
+		user[22] = new Teacher("長澤","大輔",1,"デザイン");
+		user[23] = new Teacher("ラディ","ジェイソン",2,"デザイン");
+		user[24] = new Teacher("薄井","隆",3,"Webアプリ");
+		user[25] = new Teacher("山本","浩司",4,"3DCG");
+		user[26] = new Teacher("ハナブサ","ノブユキ",5,"デザイン");
+		user[27] = new Teacher("コヌマ","ヨシツグ",6,"Webアプリ");
+		user[28] = new Teacher("渡部","昇治",7,"Webアプリ");
+		
+		for(int i=0;i<user.length;i++){
+			user[i].showId();
+			user[i].showName();
+			//User型なのでgetSubjectが呼び出せないよ→castしてみる
+			if(i>21)
+				System.out.println("教科"+((Teacher) user[i]).getSubject());
+		}//動作確認　ifに無理矢理感アリ
+		
 	}
 }
