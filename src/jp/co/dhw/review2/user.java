@@ -147,7 +147,7 @@ public class User{
 			user[i].showId();
 			user[i].showName();
 			//User型なのでgetSubjectが呼び出せないよ→castしてみる
-			if(i>21)
+			if(user[i] instanceof Teacher == true)
 				System.out.println("教科"+((Teacher) user[i]).getSubject());
 		}//動作確認　ifに無理矢理感アリ
 		
